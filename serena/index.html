@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prevenzione in movimento – EsseGi Move Lab</title>
+<meta name="description" content="Muoversi per prevenire: cosa dicono gli studi, esercizi semplici da fare a casa e come contattare Serena Grassi Pirrone.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1b3a4b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f6f1e7;--navy:#1b3a4b;--navy2:#14303e;--sage:#b4bf9f;--olive:#4f5a3a;--ink:#2b2a25;--mute:#57544a;--line:#ddd5c3;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--cream);color:var(--ink);font:17px/1.55 'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:600;color:var(--navy);margin:0;line-height:1.2}
+a{color:var(--navy)}
+:focus-visible{outline:3px solid var(--olive);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--olive);margin:0 0 8px}
+header.hero{background:var(--navy);color:var(--cream);padding:44px 0 36px}
+.hero .eyebrow{color:var(--sage)}
+.hero h1{color:var(--cream);font-size:clamp(28px,7vw,42px)}
+.hero p{color:#c7dae3;margin:14px 0 0}
+.hero .by{margin-top:22px;font-family:'Lora',serif;font-weight:600;color:var(--cream)}
+.hero .by small{display:block;font:400 14px 'IBM Plex Sans',sans-serif;color:#9bbecd;margin-top:2px}
+nav.jump{position:sticky;top:0;z-index:5;background:var(--cream);border-bottom:1px solid var(--line)}
+nav.jump .wrap{display:flex;gap:8px;overflow-x:auto;padding:10px 20px;scrollbar-width:none}
+nav.jump a{white-space:nowrap;text-decoration:none;font-size:14px;font-weight:500;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--navy)}
+nav.jump a:hover{background:var(--navy);color:var(--cream)}
+section.blk{padding:44px 0 8px;scroll-margin-top:52px}
+section.blk h2{font-size:clamp(24px,5.5vw,32px);margin-bottom:10px}
+.lead{color:var(--mute);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:0 0 14px}
+.card h3{font-size:20px;margin-bottom:6px}
+.card p{margin:6px 0 0}
+.num{font-family:'Lora',serif;font-size:34px;font-weight:600;color:var(--navy);line-height:1}
+.src{font:400 13px/1.4 'IBM Plex Mono',ui-monospace,monospace;color:var(--mute);margin-top:12px}
+.src a{color:var(--mute)}
+.note{background:var(--navy);color:var(--cream);border-radius:12px;padding:18px 20px;margin:18px 0;border-left:6px solid var(--sage)}
+.note b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.note p{margin:0}
+.note a{color:var(--cream)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 20px;border-radius:10px;border:1px solid var(--navy);background:var(--navy);color:var(--cream);font:600 16px 'IBM Plex Sans',sans-serif;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--navy2)}
+.btn.alt{background:var(--card);color:var(--navy)}
+.btn.alt:hover{background:#efe9da}
+.row{display:flex;flex-wrap:wrap;gap:10px}
+label.f{display:block;font-weight:600;margin:14px 0 6px}
+input[type=number],input[type=text],select{width:100%;min-height:48px;padding:10px 12px;border:1px solid #bdb59f;border-radius:10px;background:#fff;font:inherit;color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--navy);margin:6px 0}
+/* meter */
+.meter{position:relative;height:18px;background:#e8e1d0;border-radius:99px;margin:14px 0 26px;overflow:visible}
+.meter i{position:absolute;left:0;top:0;bottom:0;background:var(--olive);border-radius:99px;transition:width .3s}
+.meter u{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--navy);text-decoration:none}
+.meter u span{position:absolute;top:26px;left:50%;transform:translateX(-50%);font:12px 'IBM Plex Mono',monospace;color:var(--navy);white-space:nowrap}
+.result{font-weight:600;color:var(--navy);min-height:3em}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:8px 0 6px}
+.days button{min-height:48px;border:1px solid #bdb59f;background:#fff;border-radius:10px;font:600 14px 'IBM Plex Sans',sans-serif;color:var(--navy);cursor:pointer}
+.days button[aria-pressed=true]{background:var(--olive);border-color:var(--olive);color:#fff}
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.chips button{min-height:44px;padding:8px 16px;border-radius:99px;border:1px solid #bdb59f;background:#fff;font:500 15px 'IBM Plex Sans',sans-serif;color:var(--navy);cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+/* exercises */
+details.ex{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 10px}
+details.ex summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between;min-height:56px}
+details.ex summary::-webkit-details-marker{display:none}
+details.ex summary h3{font-size:19px}
+details.ex summary small{display:block;font:400 14px 'IBM Plex Sans',sans-serif;color:var(--mute);margin-top:2px}
+details.ex summary::after{content:'+';font:600 24px 'Lora',serif;color:var(--navy);flex:none}
+details.ex[open] summary::after{content:'\2212'}
+.exbody{padding:0 18px 18px;border-top:1px solid var(--line)}
+.exbody ol{margin:12px 0;padding-left:22px}
+.exbody li{margin:4px 0}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:99px;background:#e8ecdc;color:var(--olive);margin-right:4px}
+.var{display:grid;gap:8px;margin-top:10px}
+.var div{background:var(--cream);border-radius:8px;padding:10px 12px;font-size:15px}
+.var b{color:var(--navy)}
+.done{margin-top:12px}
+/* timer */
+.timer{text-align:center}
+.clock{font:600 64px/1 'Lora',serif;color:var(--navy);margin:8px 0}
+.phase{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--olive)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* contact */
+.cgrid{display:grid;gap:10px;margin-top:14px}
+.todo{border:2px dashed #b3541e;background:#fff4ec;color:#7a3511;border-radius:12px;padding:14px 16px;margin:0 0 14px;font-size:15px}
+.checks label{display:flex;gap:10px;align-items:center;min-height:44px;font-weight:500}
+.checks input{width:22px;height:22px;accent-color:var(--navy)}
+footer{margin-top:44px;background:var(--navy2);color:#9bbecd;padding:28px 0 40px;font-size:14px}
+footer a{color:#c7dae3}
+footer ol{padding-left:20px;margin:8px 0 0}
+footer li{margin:6px 0}
+footer h2{color:var(--cream);font-size:20px}
+.hidden{display:none!important}
+
+.brand{background:#f7f7f7;border-bottom:1px solid var(--line)}
+.brand .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 20px}
+.brand img{display:block;height:auto;width:min(260px,62%)}
+.brand a.back{font-size:13px;font-weight:600;text-decoration:none;color:var(--navy);white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="brand"><div class="wrap"><img src="logo-essegi-move-lab.jpg" alt="EsseGi Move Lab · Health, Strength, Perform" width="1600" height="331"><a class="back" href="/">&larr; Tutti i materiali</a></div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Prevenzione in movimento</p>
+    <h1>Muoversi per prevenire: quello che dicono gli studi, e cosa puoi fare da casa</h1>
+    <p>Una pagina da tenere sul telefono: i messaggi dell'intervento, un controllo veloce dei tuoi minuti di movimento, esercizi semplici e un modo per scrivermi.</p>
+    <p class="by">Dott.ssa Serena Grassi Pirrone<small>Health Trainer, Chinesiologa clinica, S&amp;C, HMS · EsseGi Move Lab</small></p>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sezioni">
+  <div class="wrap">
+    <a href="#messaggi">3 messaggi</a>
+    <a href="#studi">Gli studi</a>
+    <a href="#tu">Il tuo movimento</a>
+    <a href="#esercizi">Esercizi a casa</a>
+    <a href="#screening">Screening</a>
+    <a href="#contatti">Consulenza gratuita</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- MESSAGGI -->
+<section class="blk" id="messaggi">
+  <p class="eyebrow">Da portare a casa</p>
+  <h2>Tre messaggi</h2>
+  <div class="card"><div class="num">1</div><p>Muoversi con regolarità si associa a meno rischio per diversi tumori. Il livello raccomandato è un buon punto di partenza.</p></div>
+  <div class="card"><div class="num">2</div><p>Interrompere le lunghe ore da seduti: anche questo conta.</p></div>
+  <div class="card"><div class="num">3</div><p>Il movimento affianca lo screening e le cure, non li sostituisce.</p></div>
+</section>
+
+<!-- STUDI -->
+<section class="blk" id="studi">
+  <p class="eyebrow">Cosa dicono gli studi</p>
+  <h2>I numeri, con le fonti</h2>
+  <p class="lead">Sono confronti tra gruppi di persone, non una promessa per il singolo. Ogni dato rimanda allo studio originale.</p>
+
+  <div class="card">
+    <div class="num">13 su 26</div>
+    <p>tumori hanno un rischio più basso in chi fa più attività fisica nel tempo libero. Dati su 1,44 milioni di adulti seguiti in 12 studi, con 186.932 tumori registrati.</p>
+    <p class="src">Moore et al. 2016, JAMA Intern Med 176(6):816–825 · <a href="https://doi.org/10.1001/jamainternmed.2016.1548" target="_blank" rel="noopener">doi</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/27183032/" target="_blank" rel="noopener">PubMed</a></p>
+  </div>
+
+  <div class="card">
+    <div class="num">7 tumori</div>
+    <p>con evidenza forte secondo una sintesi di esperti: chi è più attivo ha meno rischio. Il tempo trascorso da seduti molto elevato si associa a circa +30% di rischio per endometrio e colon-retto.</p>
+    <p class="src">Patel et al. 2019, Med Sci Sports Exerc 51(11):2391–2402 · <a href="https://doi.org/10.1249/MSS.0000000000002117" target="_blank" rel="noopener">doi</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6814265/" target="_blank" rel="noopener">testo completo</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Basta il minimo raccomandato?</h3>
+    <p>Già a circa 150 minuti a settimana (7,5 MET-ore) il rischio è più basso rispetto a chi non fa attività nel tempo libero: per esempio colon −8%, seno −6%. A circa 300 minuti (15 MET-ore): colon −14%, seno −10%.</p>
+    <p class="src">Matthews et al. 2020, J Clin Oncol 38(7):686–697 · <a href="https://doi.org/10.1200/JCO.19.02407" target="_blank" rel="noopener">doi</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7048166/" target="_blank" rel="noopener">testo completo</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Dopo una diagnosi di tumore del colon</h3>
+    <p>In una prova randomizzata su 889 persone, dopo la chemioterapia, 3 anni di esercizio strutturato hanno ridotto del 28% ricadute, nuovi tumori o decessi (HR 0,72; IC 95% 0,55–0,94) rispetto alla sola educazione sanitaria. È uno studio su un solo tipo di tumore: il programma va sempre concordato con l'équipe.</p>
+    <p class="src">Courneya et al. 2025, N Engl J Med 393:13–25 · <a href="https://doi.org/10.1056/NEJMoa2502760" target="_blank" rel="noopener">doi</a></p>
+  </div>
+
+  <div class="note"><b>Attenzione</b><p>Questi sono studi osservazionali (tranne l'ultimo): mostrano un'associazione, non dimostrano che il movimento da solo prevenga un tumore. Lo screening e le cure restano insostituibili.</p></div>
+</section>
+
+<!-- TU -->
+<section class="blk" id="tu">
+  <p class="eyebrow">Controllo veloce</p>
+  <h2>Quanto ti muovi?</h2>
+  <p class="lead">Confronta la tua settimana tipo con le linee guida OMS per gli adulti. Non è una diagnosi e non salva nulla online.</p>
+
+  <div class="card">
+    <label class="f" for="intens">Tipo di attività aerobica</label>
+    <select id="intens">
+      <option value="mod">Moderata (cammino a passo svelto, bici tranquilla)</option>
+      <option value="vig">Vigorosa (corsa, fiato corto)</option>
+    </select>
+    <label class="f" for="min">Minuti a settimana: <output id="minOut">0</output></label>
+    <input type="range" id="min" min="0" max="400" step="5" value="0">
+    <div class="meter" aria-hidden="true"><i id="bar" style="width:0"></i><u id="m1"><span id="l1">150</span></u><u id="m2"><span id="l2">300</span></u></div>
+    <p class="result" id="res" aria-live="polite"></p>
+
+    <label class="f">Giorni della settimana con esercizi di rinforzo muscolare</label>
+    <div class="days" id="days" role="group" aria-label="Giorni di rinforzo"></div>
+    <p class="result" id="resF" aria-live="polite"></p>
+    <p class="src">Bull et al. 2020, Linee guida OMS, Br J Sports Med 54(24):1451–1462 · <a href="https://doi.org/10.1136/bjsports-2020-102955" target="_blank" rel="noopener">doi</a> · <a href="https://www.ncbi.nlm.nih.gov/books/NBK566048/" target="_blank" rel="noopener">raccomandazioni</a></p>
+  </div>
+
+  <div class="card">
+    <h3>Il quadro OMS in breve</h3>
+    <p>Adulti: 150–300 minuti a settimana di attività moderata, oppure 75–150 vigorosa, o una combinazione equivalente. In più, rinforzo muscolare dei principali gruppi muscolari almeno 2 giorni a settimana. Qualsiasi quantità è meglio di nessuna. Se si sta molto seduti, l'OMS suggerisce di fare più del minimo raccomandato.</p>
+    <p class="src">Bull et al. 2020 · <a href="https://www.ncbi.nlm.nih.gov/books/NBK566048/" target="_blank" rel="noopener">raccomandazioni complete</a></p>
+  </div>
+</section>
+
+<!-- ESERCIZI -->
+<section class="blk" id="esercizi">
+  <p class="eyebrow">Da fare a casa</p>
+  <h2>Esercizi semplici, piccoli attrezzi</h2>
+  <p class="lead">Scegli cosa hai in casa e apri l'esercizio. Sono movimenti di rinforzo che ricalcano gesti quotidiani (alzarsi, spingere, tirare, portare), in linea con la raccomandazione OMS di rinforzare i principali gruppi muscolari almeno 2 giorni a settimana.</p>
+
+  <div class="chips" id="chips" role="group" aria-label="Filtra per attrezzo"></div>
+  <div id="exlist"></div>
+
+  <div class="note"><b>Come regolarti</b><p>Muoviti con controllo e respira con regolarità. Scegli una variante che ti permetta di restare tecnico: il carico si aumenta gradualmente. Se senti dolore (non il normale affaticamento muscolare), fermati. Se hai patologie, sei in terapia o hai avuto una diagnosi di tumore, concorda gli esercizi con il medico o l'équipe: le raccomandazioni per chi ha avuto un tumore sono di restare attivi, con un programma adattato caso per caso. <a href="https://doi.org/10.1249/MSS.0000000000002116" target="_blank" rel="noopener">Campbell et al. 2019</a>.</p></div>
+
+  <div class="card timer">
+    <h3>Timer lavoro / recupero</h3>
+    <p class="lead" style="margin-bottom:6px">Imposta tu i tempi, in base a come ti senti.</p>
+    <div class="two">
+      <div><label class="f" for="tw">Lavoro (sec.)</label><input type="number" id="tw" inputmode="numeric" min="5" max="300" value="30"></div>
+      <div><label class="f" for="tr">Recupero (sec.)</label><input type="number" id="tr" inputmode="numeric" min="0" max="300" value="30"></div>
+    </div>
+    <div class="phase" id="phase">Pronto</div>
+    <div class="clock" id="clock" aria-live="off">00:30</div>
+    <div class="row" style="justify-content:center">
+      <button class="btn" id="tgo">Avvia</button>
+      <button class="btn alt" id="trs">Azzera</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Pause dalla sedia</h3>
+    <p>Interrompere le pause lunghe da seduti conta anche per il rischio. Un modo semplice: ogni tanto alzati, cammina per casa o fai qualche alzata dalla sedia (primo esercizio della lista).</p>
+    <p class="src">Patel et al. 2019 · Bull et al. 2020 (OMS) · <a href="https://www.ncbi.nlm.nih.gov/books/NBK566048/" target="_blank" rel="noopener">raccomandazioni</a></p>
+  </div>
+</section>
+
+<!-- SCREENING -->
+<section class="blk" id="screening">
+  <p class="eyebrow">Prevenzione secondaria · Puglia</p>
+  <h2>Non lasciare quella lettera nel cassetto</h2>
+  <div class="card"><h3>Cervice uterina</h3><p>Donne di 25–64 anni. Pap test o test HPV-DNA, ogni 3 o 5 anni.</p></div>
+  <div class="card"><h3>Mammella</h3><p>Donne di 50–69 anni. Mammografia ogni 2 anni.</p></div>
+  <div class="card"><h3>Colon-retto</h3><p>Uomini e donne di 50–69 anni. Ricerca di sangue occulto nelle feci ogni 2 anni, con kit ritirato in farmacia.</p></div>
+  <div class="note"><b>Esami gratuiti, su invito della ASL</b><p>Non hai ricevuto la lettera? Numero verde regionale <a href="tel:800957773">800 957 773</a></p></div>
+  <p class="src">Regione Puglia, screening oncologici · <a href="https://prevenzione.regione.puglia.it" target="_blank" rel="noopener">prevenzione.regione.puglia.it</a></p>
+</section>
+
+<!-- CONTATTI -->
+<section class="blk" id="contatti">
+  <p class="eyebrow">Parliamone</p>
+  <h2>Mettiti in contatto con me</h2>
+  <p class="lead">Prenota o scrivimi su WhatsApp dicendo cosa ti interessa. Non raccolgo nulla su questa pagina: il messaggio parte dalla tua app.</p>
+
+  <div class="note" style="margin-top:0"><b>Consulenza gratuita fino al 12/12</b><p>Puoi prenotare una consulenza gratuita di 30 minuti, fino al 12/12, scegliendo il giorno e l'orario dal calendario.</p>
+    <p style="margin-top:14px"><a class="btn" style="background:var(--cream);color:var(--navy);border-color:var(--cream)" href="https://calendar.app.google/L4kPfkduhRdzpkmr9" target="_blank" rel="noopener">Prenota la consulenza</a></p></div>
+
+  <div class="card">
+    <h3>WhatsApp</h3>
+    <p><a href="https://wa.me/393293396976" target="_blank" rel="noopener">329 339 6976</a><br>Scrivimi dal lunedì al venerdì, dalle 9 alle 19</p>
+    <h3 style="margin-top:16px">Dove</h3>
+    <p>Alma Sport, via dei Palumbo 59, Lecce<br><a href="https://www.google.com/maps/search/?api=1&query=Alma+Sport+via+dei+Palumbo+59+Lecce" target="_blank" rel="noopener">Apri su Google Maps</a></p>
+  </div>
+
+  <div class="todo hidden" id="todo"><b>Da completare:</b> aggiungi almeno un recapito nel blocco CONFIG in fondo al file.</div>
+
+  <div class="card">
+    <p style="margin-top:0;font-weight:600">Di cosa vorresti parlare?</p>
+    <div class="checks" id="interests"></div>
+    <label class="f" for="nm">Il tuo nome (facoltativo)</label>
+    <input type="text" id="nm" autocomplete="given-name" placeholder="Come ti chiami?">
+    <div class="cgrid" id="cbtns"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Fonti</h2>
+    <ol>
+      <li>Moore SC et al. Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults. JAMA Intern Med. 2016;176(6):816–825. <a href="https://doi.org/10.1001/jamainternmed.2016.1548" target="_blank" rel="noopener">doi:10.1001/jamainternmed.2016.1548</a></li>
+      <li>Patel AV et al. American College of Sports Medicine Roundtable Report on Physical Activity, Sedentary Behavior, and Cancer Prevention and Control. Med Sci Sports Exerc. 2019;51(11):2391–2402. <a href="https://doi.org/10.1249/MSS.0000000000002117" target="_blank" rel="noopener">doi:10.1249/MSS.0000000000002117</a></li>
+      <li>Matthews CE et al. Amount and intensity of leisure-time physical activity and lower cancer risk. J Clin Oncol. 2020;38(7):686–697. <a href="https://doi.org/10.1200/JCO.19.02407" target="_blank" rel="noopener">doi:10.1200/JCO.19.02407</a></li>
+      <li>Courneya KS et al. Structured exercise after adjuvant chemotherapy for colon cancer. N Engl J Med. 2025;393:13–25. <a href="https://doi.org/10.1056/NEJMoa2502760" target="_blank" rel="noopener">doi:10.1056/NEJMoa2502760</a></li>
+      <li>Bull FC et al. World Health Organization 2020 guidelines on physical activity and sedentary behaviour. Br J Sports Med. 2020;54(24):1451–1462. <a href="https://doi.org/10.1136/bjsports-2020-102955" target="_blank" rel="noopener">doi:10.1136/bjsports-2020-102955</a></li>
+      <li>Campbell KL et al. Exercise guidelines for cancer survivors: consensus statement from international multidisciplinary roundtable. Med Sci Sports Exerc. 2019;51(11):2375–2390. <a href="https://doi.org/10.1249/MSS.0000000000002116" target="_blank" rel="noopener">doi:10.1249/MSS.0000000000002116</a></li>
+      <li>Regione Puglia, screening oncologici. <a href="https://prevenzione.regione.puglia.it" target="_blank" rel="noopener">prevenzione.regione.puglia.it</a></li>
+    </ol>
+    <p style="margin-top:20px">Contenuti informativi a carattere generale: non sostituiscono il parere del medico né uno screening o una cura. © EsseGi Move Lab – Dott.ssa Serena Grassi Pirrone.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== DA COMPLETARE: i tuoi recapiti. Lascia '' per nascondere il pulsante. =====
+   whatsapp: numero con prefisso, senza + né spazi (es. '39XXXXXXXXXX')
+   instagram / sito: indirizzo completo (https://...)                              */
+var CONFIG = {
+  nome: 'Dott.ssa Serena Grassi Pirrone',
+  whatsapp: '393293396976',
+  telefono: '',
+  email: '',
+  instagram: '',
+  sito: ''
+};
+/* ===== ESERCIZI: 'video' = link opzionale a un tuo video/foto dimostrativo ===== */
+var EX = [
+ {n:'Alzarsi dalla sedia', att:['Sedia'], sub:'Gambe e glutei · gesto di ogni giorno',
+  st:['Siediti sul bordo di una sedia stabile, piedi a terra a larghezza bacino.','Spingi con i piedi e alzati in piedi, tenendo il busto eretto.','Risiediti lentamente, senza lasciarti cadere.'],
+  ez:'Aiutati con le mani sulle cosce o usa una sedia più alta.', di:'Incrocia le braccia al petto, rallenta la discesa o tieni in mano una bottiglia piena.', video:''},
+ {n:'Squat a corpo libero', att:['Nessuno'], sub:'Gambe e glutei',
+  st:['Piedi alla larghezza delle spalle, punte leggermente aperte.','Porta il bacino indietro e in basso come per sederti, ginocchia in linea con i piedi.','Spingi sui piedi e torna in piedi.'],
+  ez:'Scendi di meno o tieniti a un piano stabile.', di:'Rallenta la discesa, o tieni uno zaino carico davanti al petto.', video:''},
+ {n:'Flessioni al muro', att:['Muro'], sub:'Spinta · petto, spalle, braccia',
+  st:['In piedi di fronte al muro, mani all’altezza delle spalle, braccia tese.','Piega i gomiti e avvicina il petto al muro, corpo in linea.','Spingi e torna alla partenza.'],
+  ez:'Avvicina i piedi al muro.', di:'Allontana i piedi dal muro, oppure fai le flessioni appoggiando le mani su un tavolo robusto.', video:''},
+ {n:'Ponte per i glutei', att:['Nessuno'], sub:'Glutei e retro coscia',
+  st:['Sdraiata/o a terra, ginocchia piegate, piedi appoggiati.','Spingi sui piedi e solleva il bacino fino a formare una linea dalle spalle alle ginocchia.','Scendi lentamente vertebra dopo vertebra.'],
+  ez:'Solleva meno il bacino.', di:'Fai il ponte con una gamba sola, oppure appoggia sul bacino uno zaino.', video:''},
+ {n:'Salita sul gradino', att:['Gradino'], sub:'Gambe e glutei · equilibrio',
+  st:['Davanti a un gradino stabile (o al primo scalino di casa), tieniti a un appoggio se serve.','Sali con un piede, spingendo con quella gamba, e porta su l’altra.','Scendi con controllo e alterna le gambe.'],
+  ez:'Usa un gradino più basso e tieniti al corrimano.', di:'Sali senza appoggiarti, o porta le borse della spesa in mano.', video:''},
+ {n:'Rematore con zaino o bottiglie', att:['Zaino o bottiglie'], sub:'Tirare · schiena e braccia',
+  st:['Piedi alla larghezza del bacino, ginocchia leggermente piegate, busto inclinato in avanti con schiena neutra.','Con uno zaino carico tenuto con due mani, o una bottiglia piena per mano, porta i gomiti indietro verso i fianchi.','Torna alla partenza lentamente.'],
+  ez:'Usa un carico leggero o appoggiati con una mano a un tavolo, lavorando un braccio alla volta.', di:'Aumenta il carico (zaino più pesante, bottiglie più grandi) o rallenta la fase di ritorno.', video:''},
+ {n:'Tirata con elastico', att:['Elastico'], sub:'Tirare · schiena e spalle',
+  st:['Seduta/o o in piedi, elastico fissato a una maniglia o a una porta chiusa, braccia tese davanti a te.','Tira l’elastico verso il petto, portando i gomiti indietro e avvicinando le scapole.','Rilascia lentamente.'],
+  ez:'Usa un elastico più leggero o accorcia il movimento.', di:'Usa un elastico più resistente o allontanati dal punto di ancoraggio.', video:''},
+ {n:'Alzate sui talloni', att:['Nessuno','Muro'], sub:'Polpacci · equilibrio',
+  st:['In piedi, mani appoggiate a un muro o a uno schienale per sicurezza.','Sollevati sulle punte dei piedi, il più in alto possibile.','Scendi lentamente.'],
+  ez:'Tieniti saldamente all’appoggio con entrambe le mani.', di:'Fallo su una gamba sola, o con un solo dito di appoggio.', video:''},
+ {n:'Equilibrio su una gamba', att:['Sedia'], sub:'Equilibrio e stabilità',
+  st:['In piedi accanto a una sedia, una mano appoggiata allo schienale.','Solleva un piede da terra e mantieni la posizione, sguardo fisso avanti.','Cambia gamba.'],
+  ez:'Tieniti con due mani, o con la punta del piede sollevato appena appoggiata.', di:'Togli la mano dall’appoggio, poi chiudi gli occhi solo con la sedia vicina e in sicurezza.', video:''},
+ {n:'Passeggiata con le borse', att:['Zaino o bottiglie'], sub:'Presa, tronco e gambe · portare carichi',
+  st:['Prendi un peso in ogni mano (borse della spesa o bottiglie), spalle abbassate e busto eretto.','Cammina per qualche metro a passi regolari, senza inclinarti da un lato.','Appoggia i pesi e ripeti.'],
+  ez:'Usa pesi leggeri o uno solo alla volta.', di:'Aumenta i pesi o allunga il percorso.', video:''}
+];
+
+/* ---------- utilità ---------- */
+function $(id){return document.getElementById(id)}
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+
+/* ---------- controllo minuti ---------- */
+(function(){
+  var min=$('min'),it=$('intens'),bar=$('bar'),res=$('res');
+  function lim(){return it.value==='vig'?[75,150]:[150,300]}
+  function upd(){
+    var v=+min.value,l=lim(),max=400,vig=it.value==='vig';
+    $('minOut').textContent=v;
+    bar.style.width=Math.min(100,v/max*100)+'%';
+    $('m1').style.left=(l[0]/max*100)+'%';$('m2').style.left=(l[1]/max*100)+'%';
+    $('l1').textContent=l[0];$('l2').textContent=l[1];
+    var t;
+    if(v===0)t='Si parte da qui: qualsiasi quantità di attività è meglio di nessuna.';
+    else if(v<l[0])t='Sei sotto la soglia minima di '+l[0]+' minuti: ogni minuto in più conta, e anche poco è meglio di niente.';
+    else if(v<=l[1])t='Sei nell’intervallo raccomandato ('+l[0]+'–'+l[1]+' minuti).';
+    else t='Sei oltre l’intervallo raccomandato: l’OMS indica un possibile beneficio aggiuntivo oltre i '+l[1]+' minuti.';
+    res.textContent=t;
+    store('esgi_min',v);store('esgi_int',it.value);
+  }
+  var s=store('esgi_min'),si=store('esgi_int');
+  if(si)it.value=si; if(s!==null&&s!==undefined)min.value=s;
+  min.addEventListener('input',upd);it.addEventListener('change',upd);upd();
+
+  var names=['Lun','Mar','Mer','Gio','Ven','Sab','Dom'],box=$('days'),sel=[];
+  try{sel=JSON.parse(store('esgi_days')||'[]')}catch(e){}
+  function updF(){
+    var n=sel.length;
+    $('resF').textContent=n===0?'Nessun giorno segnato: l’obiettivo OMS è almeno 2 giorni a settimana.':n===1?'1 giorno: ne manca almeno uno per arrivare ai 2 raccomandati.':n+' giorni: obiettivo OMS (almeno 2) raggiunto.';
+    store('esgi_days',JSON.stringify(sel));
+  }
+  names.forEach(function(d,i){
+    var b=document.createElement('button');b.type='button';b.textContent=d;
+    b.setAttribute('aria-pressed',sel.indexOf(i)>-1);
+    b.onclick=function(){var k=sel.indexOf(i);if(k>-1)sel.splice(k,1);else sel.push(i);b.setAttribute('aria-pressed',k===-1);updF()};
+    box.appendChild(b);
+  });updF();
+})();
+
+/* ---------- esercizi ---------- */
+(function(){
+  var tags=['Tutti'];EX.forEach(function(e){e.att.forEach(function(a){if(tags.indexOf(a)<0)tags.push(a)})});
+  var cur='Tutti',chips=$('chips'),list=$('exlist');
+  var doneSet={};try{doneSet=JSON.parse(store('esgi_done')||'{}')}catch(e){}
+  function render(){
+    chips.innerHTML='';
+    tags.forEach(function(t){var b=document.createElement('button');b.type='button';b.textContent=t;b.setAttribute('aria-pressed',t===cur);b.onclick=function(){cur=t;render()};chips.appendChild(b)});
+    list.innerHTML='';
+    EX.forEach(function(e,i){
+      if(cur!=='Tutti'&&e.att.indexOf(cur)<0)return;
+      var d=document.createElement('details');d.className='ex';
+      var s=document.createElement('summary');
+      var h=document.createElement('div');
+      h.innerHTML='<h3></h3><small></small>';h.querySelector('h3').textContent=e.n;h.querySelector('small').textContent=e.sub;
+      s.appendChild(h);d.appendChild(s);
+      var b=document.createElement('div');b.className='exbody';
+      var html='<p style="margin:12px 0 0">'+e.att.map(function(a){return '<span class="tag">'+a+'</span>'}).join('')+'</p><ol>'+e.st.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ol><div class="var"><div><b>Più facile:</b> '+e.ez+'</div><div><b>Più difficile:</b> '+e.di+'</div></div>';
+      if(e.video)html+='<p><a href="'+e.video+'" target="_blank" rel="noopener">Guarda il video dimostrativo</a></p>';
+      html+='<div class="done"><button type="button" class="btn alt" data-i="'+i+'" aria-pressed="'+(!!doneSet[i])+'">'+(doneSet[i]?'Fatto oggi (tocca per annullare)':'Segna come fatto oggi')+'</button></div>';
+      b.innerHTML=html;d.appendChild(b);list.appendChild(d);
+      b.querySelector('.done button').onclick=function(){
+        var today=new Date().toDateString();
+        if(doneSet[i]===today)delete doneSet[i];else doneSet[i]=today;
+        store('esgi_done',JSON.stringify(doneSet));
+        this.textContent=doneSet[i]===today?'Fatto oggi (tocca per annullare)':'Segna come fatto oggi';
+      };
+      if(doneSet[i]===new Date().toDateString())b.querySelector('.done button').textContent='Fatto oggi (tocca per annullare)';
+    });
+  }
+  render();
+})();
+
+/* ---------- timer ---------- */
+(function(){
+  var tw=$('tw'),tr=$('tr'),clock=$('clock'),ph=$('phase'),go=$('tgo'),rs=$('trs'),iv=null,state='idle',left=0;
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x}
+  function val(el,d){var v=parseInt(el.value,10);return isNaN(v)||v<0?d:v}
+  function setIdle(){clearInterval(iv);iv=null;state='idle';ph.textContent='Pronto';clock.textContent=fmt(val(tw,30));go.textContent='Avvia'}
+  function buzz(){try{navigator.vibrate&&navigator.vibrate(200)}catch(e){}}
+  function tick(){
+    left--;
+    if(left<=0){
+      buzz();
+      if(state==='work'){var r=val(tr,0);if(r>0){state='rest';left=r;ph.textContent='Recupero'}else{state='work';left=val(tw,30)}}
+      else{state='work';left=val(tw,30);ph.textContent='Lavoro'}
+    }
+    clock.textContent=fmt(left);
+  }
+  go.onclick=function(){
+    if(iv){clearInterval(iv);iv=null;go.textContent='Riprendi';return}
+    if(state==='idle'){state='work';left=Math.max(1,val(tw,30));ph.textContent='Lavoro';clock.textContent=fmt(left)}
+    iv=setInterval(tick,1000);go.textContent='Pausa';
+  };
+  rs.onclick=setIdle;
+  [tw,tr].forEach(function(e){e.addEventListener('change',function(){if(state==='idle')setIdle()})});
+  setIdle();
+})();
+
+/* ---------- contatti ---------- */
+(function(){
+  var C=CONFIG,box=$('cbtns'),ints=['Un percorso di allenamento su misura per me','Informazioni sulle valutazioni','Altro: ho una domanda'],iw=$('interests');
+  ints.forEach(function(t,i){var l=document.createElement('label');l.innerHTML='<input type="checkbox" value="'+i+'"> <span></span>';l.querySelector('span').textContent=t;iw.appendChild(l)});
+  function msg(){
+    var sel=[].slice.call(iw.querySelectorAll('input:checked')).map(function(c){return ints[c.value]});
+    var n=$('nm').value.trim();
+    var t='Ciao Serena'+(n?', sono '+n:'')+'. Ho letto la pagina del tuo intervento "Prevenzione in movimento".';
+    t+=sel.length?' Vorrei saperne di più su: '+sel.map(function(s){return s.charAt(0).toLowerCase()+s.slice(1)}).join('; ')+'.':' Vorrei avere qualche informazione.';
+    return t;
+  }
+  function add(label,fn,alt){
+    var a=document.createElement('a');a.className='btn'+(alt?' alt':'');a.textContent=label;a.target='_blank';a.rel='noopener';
+    a.addEventListener('click',function(e){var u=fn();if(u)a.href=u});a.href='#contatti';
+    a.addEventListener('focus',function(){var u=fn();if(u)a.href=u});
+    a.addEventListener('pointerdown',function(){var u=fn();if(u)a.href=u});
+    box.appendChild(a);return a;
+  }
+  var any=false;
+  if(C.whatsapp){any=true;add('Scrivimi su WhatsApp',function(){return 'https://wa.me/'+C.whatsapp.replace(/\D/g,'')+'?text='+encodeURIComponent(msg())})}
+  if(C.email){any=true;add('Scrivimi una email',function(){return 'mailto:'+C.email+'?subject='+encodeURIComponent('Dal seminario Prevenzione in movimento')+'&body='+encodeURIComponent(msg())},true)}
+  if(C.telefono){any=true;add('Chiamami',function(){return 'tel:'+C.telefono.replace(/[^\d+]/g,'')},true)}
+  if(C.instagram){any=true;add('Instagram',function(){return C.instagram},true)}
+  if(C.sito){any=true;add('Sito web',function(){return C.sito},true)}
+  if(any){
+    var v=document.createElement('button');v.type='button';v.className='btn alt';v.textContent='Salva il mio contatto';
+    v.onclick=function(){
+      var l=['BEGIN:VCARD','VERSION:3.0','FN:'+C.nome,'ORG:EsseGi Move Lab','TITLE:Health Trainer, Chinesiologa clinica'];
+      if(C.telefono||C.whatsapp)l.push('TEL;TYPE=CELL:'+(C.telefono||('+'+C.whatsapp)).replace(/[^\d+]/g,''));
+      if(C.email)l.push('EMAIL:'+C.email);
+      if(C.sito)l.push('URL:'+C.sito);
+      l.push('END:VCARD');
+      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([l.join('\r\n')],{type:'text/vcard'}));a.download='Serena-Grassi-Pirrone.vcf';document.body.appendChild(a);a.click();a.remove();
+    };
+    box.appendChild(v);
+  } else $('todo').classList.remove('hidden');
+})();
+</script>
+</body>
+</html>
